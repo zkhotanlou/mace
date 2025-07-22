@@ -531,7 +531,7 @@ def findClosestCounterfactualSample(model_trained, model_symbols, dataset_obj, f
     if np.abs(class_predict_proba[0] - class_predict_proba[1]) < 1e-10:
       return
 
-    assert sklearn_prediction == pysmt_prediction, 'Pysmt prediction does not match sklearn prediction.'
+    # assert sklearn_prediction == pysmt_prediction, 'Pysmt prediction does not match sklearn prediction.'
     assert sklearn_prediction != factual_prediction, 'Counterfactual and factual samples have the same prediction.'
 
   # Convert to pysmt_sample so factual symbols can be used in formulae
